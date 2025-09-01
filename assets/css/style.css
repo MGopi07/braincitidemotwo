@@ -3668,7 +3668,7 @@ button.nav-link2.active span {
 
 .single-news.two .news-inner .read-btn a:hover {
   color: #28a3ed;
-  -webkit-text-fill-color:#28a3ed;
+  -webkit-text-fill-color: #28a3ed;
   font-weight: 500;
 }
 
@@ -4776,32 +4776,149 @@ button.nav-link2.active span {
   right: 0;
 }
 .sidebar-widget h4 {
-    font-family: "Saira", sans-serif;
-    font-weight: 600;
-    font-size: 25px;
-    color: #212121;
-    margin-bottom: 25px;
+  font-family: "Saira", sans-serif;
+  font-weight: 600;
+  font-size: 25px;
+  color: #212121;
+  margin-bottom: 25px;
 }
 .social-follow li:first-child {
-    margin-left: 0;
+  margin-left: 0;
 }
 
 .social-follow li {
-    display: inline-block;
-    margin: 0 10px;
+  display: inline-block;
+  margin: 0 10px;
 }
 .social-follow li a {
-    display: inline-block;
-    font-size: 14px;
-    height: 35px;
-    width: 35px;
-    line-height: 35px;
-    text-align: center;
-    border: 1px solid #696969;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    border-radius: 2px;
-    color: #696969;
-    -webkit-transition: all 0.5s ease-out 0s;
-    transition: all 0.5s ease-out 0s;
+  display: inline-block;
+  font-size: 14px;
+  height: 35px;
+  width: 35px;
+  line-height: 35px;
+  text-align: center;
+  border: 1px solid #696969;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 2px;
+  color: #696969;
+  -webkit-transition: all 0.5s ease-out 0s;
+  transition: all 0.5s ease-out 0s;
+}
+/*------------*/
+
+.bg-blue {
+  background: #28a3ed;
+}
+.border-blue {
+  border-color: #28a3ed !important;
+}
+.btn.btn-blue {
+  background: #28a3ed !important;
+  padding: 10px 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+.causes-item {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.causes-item .causes-overlay {
+  position: absolute;
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+.causes-item:hover .causes-overlay {
+  height: 100%;
+  opacity: 1;
+}
+/*------------*/
+.breadcrumbs.bread-new {
+  background-position: center top 50%;
+  background-image: linear-gradient(
+      90deg,
+      rgba(12, 12, 12, 0.73) 0%,
+      rgba(12, 12, 12, 0.51) 100%
+    ),
+    url(../img/bg-bread.jpg) !important;
+}
+
+/*------what's app-------*/
+/* Floating WhatsApp Button */
+:root {
+  --wa-size: 60px;
+  --wa-bottom: 28px;
+  --wa-right: 28px;
+}
+
+.wa-fab {
+  position: fixed;
+  bottom: var(--wa-bottom);
+  right: var(--wa-right);
+  width: var(--wa-size);
+  height: var(--wa-size);
+  border-radius: 50%;
+  background-color: #25d366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out;
+}
+
+.wa-fab:hover {
+  transform: scale(1.1);
+}
+
+.wa-fab img {
+  width: 60%;
+  height: 60%;
+}
+
+.wa-label {
+  display: none;
+  position: fixed;
+  bottom: calc(var(--wa-bottom) + 15px);
+  right: calc(var(--wa-right) + 70px);
+  background: #25d366;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  white-space: nowrap;
+  z-index: 9998;
+}
+
+.wa-fab:hover + .wa-label {
+  display: inline-block;
+}
+
+.pulse {
+  animation: pulse-btn 3s infinite;
+}
+
+@keyframes pulse-btn {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 200, 0, 1);
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgba(0, 200, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 200, 0, 0);
+  }
 }
